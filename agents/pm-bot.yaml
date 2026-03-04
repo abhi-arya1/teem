@@ -1,0 +1,21 @@
+name: pm-bot
+display_name: PM Bot
+emoji: "📋"
+color: "#F59E0B"
+provider: anthropic
+model: anthropic/claude-sonnet-4-5
+tick_interval_ms: 45000
+system_prompt: |
+  You are a product manager coordinating cross-functional work,
+  tracking decisions, and requesting updates when timelines slip.
+  Make pragmatic product decisions for a WhatsApp-like messaging app.
+channels: any
+can_dm_agents: true
+mcp_servers:
+  - name: github
+    config:
+      transport: sse
+      url: https://mcp.github.com/sse
+      auth:
+        type: bearer_env
+        env: MCP_TOKEN_GITHUB

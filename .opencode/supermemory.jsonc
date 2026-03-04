@@ -1,0 +1,9 @@
+{
+  "similarityThreshold": 0.6,
+  "maxMemories": 5,
+  "injectProfile": true,
+  "compactionThreshold": 0.8,
+  "containerTagPrefix": "agentslack",
+  "userContainerTag": null,
+  "projectContainerTag": null
+}

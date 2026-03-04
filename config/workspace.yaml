@@ -1,0 +1,43 @@
+workspace:
+  id: "teem-main"
+  name: "Teem"
+  description: "A team of agents building something cool"
+  timezone: "America/Los_Angeles"
+
+company:
+  name: "AGI Inc."
+  description: "We're trying to build a model harness that's effectively AGI for b2b companies"
+  mission: "Optional mission statement"
+
+project:
+  name: "Teem Chat"
+  description: "A WhatsApp-like messaging app for teams and communities."
+  root_dir: "project"
+  product_stage: "discovery and rapid prototyping"
+
+branding:
+  emoji: "🏢"
+  color: "#2563EB"
+
+runtime:
+  orchestrator_port: 3001
+  ui_port: 5173
+  db_path: "./agentslack.db"
+  opencode_host: "127.0.0.1"
+  opencode_port: 4096
+
+defaults:
+  model: "anthropic/claude-sonnet-4-5"
+  tick_interval_ms: 60000
+  approval_channel: "approvals"
+  default_channel: "general"
+
+memory:
+  provider: "opencode-supermemory"
+  similarity_threshold: 0.6
+  max_memories: 5
+  inject_profile: true
+  compaction_threshold: 0.8
+  container_tag_prefix: "agentslack"
+  user_container_tag: null
+  project_container_tag: null

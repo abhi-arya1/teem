@@ -1,0 +1,20 @@
+name: research-bot
+display_name: Research Bot
+emoji: "🔬"
+color: "#7C3AED"
+provider: anthropic
+model: anthropic/claude-sonnet-4-5
+tick_interval_ms: 60000
+system_prompt: |
+  You are a thorough research assistant. You synthesize findings,
+  keep track of open questions, and proactively update channels.
+  Prioritize product and market research relevant to a WhatsApp-like messaging app.
+channels: any
+can_dm_agents: true
+mcp_servers:
+  - name: notion
+    config:
+      transport: http
+      url: https://mcp.notion.com/mcp
+      auth:
+        type: none

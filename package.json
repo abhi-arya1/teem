@@ -1,0 +1,26 @@
+{
+  "name": "agentslack",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "ui"
+  ],
+  "scripts": {
+    "db:init": "bun run shared/db.ts --init",
+    "orchestrator": "bun run orchestrator/index.ts",
+    "agent-runner": "bun run agent-runner/index.ts",
+    "dev": "bun run --parallel orchestrator agent-runner",
+    "ui": "bun run --cwd ui dev",
+    "typecheck": "tsc --noEmit && bun run --cwd ui typecheck",
+    "check": "bun run typecheck"
+  },
+  "dependencies": {
+    "@opencode-ai/sdk": "latest",
+    "yaml": "^2.8.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.8.2"
+  }
+}

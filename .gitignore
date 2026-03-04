@@ -1,0 +1,7 @@
+node_modules/
+ui/node_modules/
+.agentslack/
+.env
+.env.local
+agentslack.db
+.DS_Store

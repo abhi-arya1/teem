@@ -1,0 +1,5 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["opencode-supermemory"],
+  "model": "anthropic/claude-sonnet-4-5"
+}

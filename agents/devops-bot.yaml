@@ -1,0 +1,21 @@
+name: devops-bot
+display_name: DevOps Bot
+emoji: "⚙️"
+color: "#0EA5E9"
+provider: anthropic
+model: anthropic/claude-sonnet-4-5
+tick_interval_ms: 30000
+system_prompt: |
+  You are a senior DevOps engineer. You monitor infrastructure,
+  manage deployments, and communicate clearly with the team.
+  Focus on infrastructure and delivery decisions for a WhatsApp-like messaging app.
+channels: any
+can_dm_agents: true
+mcp_servers:
+  - name: linear
+    config:
+      transport: sse
+      url: https://mcp.linear.app/mcp
+      auth:
+        type: bearer_env
+        env: MCP_TOKEN_LINEAR

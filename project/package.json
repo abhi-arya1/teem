@@ -1,0 +1,25 @@
+{
+  "name": "teem-chat",
+  "version": "0.1.0",
+  "description": "WhatsApp-like messaging app for teams and communities",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "node server/index.js",
+    "db:setup": "node scripts/setup-db.js",
+    "start": "node server/index.js"
+  },
+  "keywords": ["messaging", "chat", "websocket", "realtime"],
+  "author": "AGI Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "pg": "^8.11.0",
+    "redis": "^4.6.5",
+    "dotenv": "^16.0.3",
+    "bcrypt": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
